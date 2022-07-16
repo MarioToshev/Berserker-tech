@@ -1,0 +1,27 @@
+﻿@page
+@model BerserkerTech.Pages.LogInModel
+@{
+}
+<section>
+    <div class="RegistrationForm">
+        <form method="post">
+            <h2>Log in</h2>
+            <input type="text" asp-for="User.Email" placeholder="Email" name="Email"><br>
+            <span asp-validation-for="User.Email" class="text-danger"></span>
+
+
+            <input type="Password" asp-for="User.Password" placeholder="Password" name="Password">
+            <span asp-validation-for="User.Password" class="text-danger"></span>
+
+            <button class="form" type="submit">Log in</button><br>
+
+            <p>Don't have an account?</p>
+         
+            <a class="text-danger">@Model.Error</a>
+         <button asp-page="Registration"class="form">Register</button><br>
+
+        </form>
+
+
+    </div>
+</section>

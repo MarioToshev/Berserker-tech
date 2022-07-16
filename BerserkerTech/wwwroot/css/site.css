@@ -1,0 +1,732 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+    display: grid;
+    font-family: Verdana, sans-serif;
+    grid-template-areas: "header header header" "section section section" "footer footer footer";
+    grid-template-rows: 80px 1fr 50px;
+    grid-template-columns: 15% 1fr 18%;
+    grid-gap: 5px;
+    height: 100vh;
+    margin: 10px;
+}
+
+nav {
+    position: absolute;
+    top: 6%;
+    left: 40%;
+    right: 0%;
+    width: 319px;
+    display: table;
+    margin: 5 auto;
+    transform: translateY(-50%);
+}
+
+    nav a {
+        position: relative;
+        width: 33.333%;
+        display: table-cell;
+        text-align: center;
+        color: #5f5c5c;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        padding: 10px 20px;
+        transition: 0.2s ease color;
+    }
+
+#indicator {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #e4c931;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+}
+
+.logo {
+    padding-left: 1%;
+}
+
+.landingPageVikingPhoto {
+    display: inline-block;
+    vertical-align: top;
+}
+
+nav a:hover {
+    color: #e4c931;
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+    background: linear-gradient(130deg, yellow);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+    left: 23%;
+    background: linear-gradient(130deg, #00e2ff);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+    left: 42%;
+    background: linear-gradient(130deg, purple);
+}
+
+nav a:nth-child(4):hover ~ #indicator {
+    left: 61%;
+    background: linear-gradient(130deg, purple);
+}
+
+nav a:nth-child(5):hover ~ #indicator {
+    left: 79%;
+    background: linear-gradient(130deg, purple);
+}
+
+
+/* Note: This example only works with Windows Insider Preview Builds 16237+ or the Fall Creators Update. */
+
+header {
+    background: white;
+    grid-area: header;
+}
+
+.filters {
+    background: #C9BFBF;
+    grid-area: nav;
+}
+
+section {
+    margin-top: 70px;
+    background: #ff930c;
+    grid-area: section;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.Description {
+    padding-top: 70px;
+    color: white;
+    font-size: 22px;
+    display: inline-block;
+}
+
+aside {
+    background: #C9C9C9;
+    grid-area: aside;
+}
+
+footer {
+    background: white;
+    grid-area: footer;
+    font-weight: bolder;
+    font-size: 15;
+}
+
+header,
+nav,
+section,
+aside,
+footer {
+    padding: 5px;
+}
+
+h1 {
+    font-weight: bolder !important;
+    font-size: 36px;
+    color: white;
+    padding-left: 70px;
+    padding-top: 25px;
+    padding-bottom: 100px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+    .searchTerm:focus {
+        color: #00B4CC;
+    }
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+div.cartContainer {
+    width: 80%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+img.computer {
+    display: block;
+    width: 130px;
+    height: 130px;
+    padding: 2.5%;
+}
+
+a.total {
+    text-decoration: bolder;
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+button.order {
+    background-color: whitesmoke;
+    font-size: 30px;
+    border-radius: 10px;
+    margin: 30px;
+    width: 200px;
+}
+
+
+/* Register form */
+
+div.RegistrationForm {
+    display: flex;
+    flex-direction:column;
+    padding: auto;
+    align-content:center;
+    color: white;
+    font-size: 24px;
+    padding-top: 5%;
+}
+
+form.form {
+    margin: auto;
+    padding: auto;
+    max-width:20%;
+}
+
+input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+button.form {
+    border: 0;
+    width: 120px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+    button.form:hover {
+        border: 2px;
+        border-color: black;
+        background-color: #C9C9C9;
+    }
+
+a {
+    text-decoration: none;
+    color: rgb(75, 72, 72);
+}
+html,
+body {
+    height: 100%;
+}
+
+nav {
+    position: absolute;
+    top: 6%;
+    left: 40%;
+    right: 0%;
+    width: 319px;
+    display: table;
+    margin: 5 auto;
+    transform: translateY(-50%);
+}
+
+    nav a {
+        position: relative;
+        width: 33.333%;
+        display: table-cell;
+        text-align: center;
+        color: #5f5c5c;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        padding: 10px 20px;
+        transition: 0.2s ease color;
+    }
+
+#indicator {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #e4c931;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+}
+
+.logo {
+    padding-left: 1%;
+}
+
+.landingPageVikingPhoto {
+    display: inline-block;
+    vertical-align: top;
+}
+
+nav a:hover {
+    color: #e4c931;
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+    background: linear-gradient(130deg, yellow);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+    left: 23%;
+    background: linear-gradient(130deg, #00e2ff);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+    left: 42%;
+    background: linear-gradient(130deg, purple);
+}
+
+nav a:nth-child(4):hover ~ #indicator {
+    left: 61%;
+    background: linear-gradient(130deg, purple);
+}
+
+nav a:nth-child(5):hover ~ #indicator {
+    left: 79%;
+    background: linear-gradient(130deg, purple);
+}
+
+
+/* Note: This example only works with Windows Insider Preview Builds 16237+ or the Fall Creators Update. */
+
+header {
+    background: white;
+    grid-area: header;
+}
+
+.filters {
+    background: #C9BFBF;
+    grid-area: nav;
+}
+
+section {
+    margin-top: 70px;
+    background: #ff930c;
+    grid-area: section;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.Description {
+    padding-top: 70px;
+    color: white;
+    font-size: 22px;
+    display: inline-block;
+}
+
+aside {
+    background: #C9C9C9;
+    grid-area: aside;
+}
+
+footer {
+    background: white;
+    grid-area: footer;
+    font-weight: bolder;
+    font-size: 15;
+}
+
+header,
+nav,
+section,
+aside,
+footer {
+    padding: 5px;
+}
+
+h1 {
+    font-weight: bolder !important;
+    font-size: 36px;
+    color: white;
+    padding-left: 70px;
+    padding-top: 25px;
+    padding-bottom: 100px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+    .searchTerm:focus {
+        color: #00B4CC;
+    }
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+div.cartContainer {
+    width: 80%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+img.computer {
+    display: block;
+    width: 130px;
+    height: 130px;
+    padding: 2.5%;
+}
+
+a.total {
+    text-decoration: bolder;
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+button.order {
+    background-color: whitesmoke;
+    font-size: 30px;
+    border-radius: 10px;
+    margin: 30px;
+    width: 200px;
+}
+
+
+/* Register form */
+
+div.RegistrationForm {
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    color: white;
+    font-size: 24px;
+    padding-top: 5%;
+}
+
+form {
+    margin: auto;
+    padding: auto;
+    max-width:30%;
+}
+
+input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+button.form {
+    border: 0;
+    width: 120px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+    button.form:hover {
+        border: 2px;
+        border-color: black;
+        background-color: #C9C9C9;
+    }
+
+a {
+    text-decoration: none;
+    color: rgb(75, 72, 72);
+}
+
+/*Store*/
+
+h1 {
+    padding-left: 40%;
+    font-weight: bolder;
+    font-size: 36px;
+    color: white;
+}
+
+img.computer {
+    display: block;
+    width: 130px;
+    height: 130px;
+}
+
+div.parts {
+    margin-left: 5%;
+    text-decoration: bolder;
+    padding-left: 70px;
+    display: flex;
+}
+
+div.container {
+    padding-top: 3%;
+}
+
+a.description {
+    padding-top: 40px;
+    padding-left: 50px;
+    font-size: 25px;
+}
+
+/*Search bar */
+
+.search {
+    width: 60%;
+    padding-top: 30px;
+    padding-left: 40px;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #ff930c;
+    border-right: none;
+    height: 46px;
+    margin:0;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: black;
+    font-size: medium;
+}
+
+    .searchTerm:focus {
+        color: black;
+        font-size: medium;
+    }
+
+.searchButton {
+    width: 40px;
+    height: 46px;
+    border: 1px solid #ff930c;
+    background: #ff930c;
+    text-align: center;
+    color: #000;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.searchBarPos {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items:center;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+section.store {
+    flex-direction: column;
+    align-items:center;
+    background: white;
+    grid-area: section;
+    overflow-y: scroll;
+}
+
+h1.store {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    color: black;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    max-width: 1500px;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+
+}
+
+    .list > .product {
+        width: 200px;
+        float: left;
+        height: 300px;
+        background: #fff;
+        margin: 1%;
+        position: relative;
+    }
+
+.product > div {
+    text-align: center;
+    position: absolute;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    bottom: 0;
+    height: 0;
+    overflow-x: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product:hover > div {
+    position: absolute;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.product > img {
+    margin: 0 auto;
+    display: block;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+
+.product:hover > img {
+    -webkit-filter: blur(3px) saturate(1.5);
+    filter: blur(3px) saturate(1.5);
+}
+
+.product > div > h2 {
+    border-bottom: 1px solid #818181;
+    padding: 0 0 1rem;
+}
+
+.descr {
+    font-size: 0.8rem;
+    padding: 2rem;
+    line-height: 1.2rem;
+    font-weight: 600;
+}
+
+.product > div > a > p {
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 2.4rem;
+    background: #ff930c;
+    width: 100%;
+    color: white;
+    text-decoration: underline #ff930c;
+}
+
+.product > img {
+    max-width: 200px;
+    max-height: 100%;
+    display: block;
+}
+
+div.componentFilters {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translate(0px, 340px);
+}
+
+button.filter {
+    width: 200px;
+    height: 40px;
+    background: #ff930c;
+    color: white;
+    border-radius: 5px;
+    border-color: #ff930c;
+    margin: 10px 10px;
+}
+
+form.empty {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+
+button.select {
+    border: 0;
+    width: 100%;
+    background: #f2f2f2;
+    border-radius: 10px;
+    font-size: 17px;
+}

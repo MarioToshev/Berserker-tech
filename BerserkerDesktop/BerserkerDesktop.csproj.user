@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AllComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ComponentForms\ComponentCreation\AddCPU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ComponentForms\ComponentCreation\AddGPU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ComponentForms\ComponentCreation\AddMotherboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ComponentForms\ComponentCreation\AddPSU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ComponentForms\ComponentCreation\AddRAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ComponentForms\ComponentCreation\AddStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ComponentForms\ControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BuildersPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ComputerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

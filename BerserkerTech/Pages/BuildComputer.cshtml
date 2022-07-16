@@ -1,0 +1,51 @@
+﻿@page
+@model BerserkerTech.Pages.BuildComputerModel
+@{
+}
+
+<section>
+    <h1 class="build">BUILD YOUR OWN PC</h1>
+    <div class="container">
+        <a class="description">
+            Welcome to the computer builder! To add parts go to the store and select "add to PC" for the component you want to add.
+        </a>
+        <a class="description">Do the same thing for editing.</a>
+        <div class="parts">
+            <img class="computer" src="https://res.cloudinary.com/dxg6ys3z5/image/upload/v1645303681/test/I9_mcrcey.jpg">
+            <a class="description">Cpu:</a>
+            <a class="description">@Model.computer.CPU.Model</a>
+        </div>
+        <div class="parts">
+            <img class="computer" src="@Model.computer.Motherboard.Photo">
+            <a class="description">Motherboard:</a>
+            <a class="description">@Model.computer.Motherboard.Model</a>
+        </div>
+        <div class="parts">
+            <img class="computer" src="@Model.computer.GPU.Photo">
+            <a class="description">GPU:</a>
+            <a class="description">@Model.computer.GPU.Model</a>
+        </div>
+        <div class="parts">
+            <img class="computer" src="@Model.computer.RAM.Photo">
+            <a class="description">RAM:</a>
+            <a class="description">@Model.computer.RAM.Model</a>
+        </div>
+        <div class="parts">
+            <img class="computer" src="@Model.computer.PSU.Photo">
+            <a class="description">PSU:</a>
+            <a class="description">@Model.computer.PSU.Model</a>
+        </div>
+        <div class="parts">
+            <img class="computer" src="@Model.computer.Storage.Photo">
+            <a class="description">Storage:</a>
+            <a class="description">@Model.computer.Storage.Model</a>
+        </div>
+         <a class="description">
+           @Model.Message
+        </a>
+        <form method="post">
+            <button asp-page="BuildComputer" class="order">Order Computer</button>
+        </form>
+        <button class="order" type="button">Order</button>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+﻿@page
+@model BerserkerTech.Pages.StoreModel
+@{
+}
+
+<form class="empty" method="post">
+    <div class="componentFilters">
+        <button type="submit" name="componentType" class="filter" value=CPU>CPUs</button>
+        <button type="submit" name="componentType" class="filter" value=GPU>GPUs</button>
+        <button type="submit" name="componentType" class="filter" value=RAM>RAM</button>
+        <button type="submit" name="componentType" class="filter" value=Motherboard>Motherboards</button>
+        <button type="submit" name="componentType" class="filter" value=Storage>Storage</button>
+        <button type="submit" name="componentType" class="filter" value=PSU>PSUs</button>
+    </div>
+</form>
+
+<section class="store">
+
+    <div class="searchBarPos">
+        <div class="search">
+            <input type="text" class="searchTerm" placeholder="What are you looking for?">
+            <button type="submit" class="searchButton">
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <h1 class="store">Our Products</h1>
+    <form method="get">
+        <div class="list">
+
+            @foreach (var component in Model.components)
+            {
+
+                <div class="product">
+                    <img src="https://res.cloudinary.com/dxg6ys3z5/image/upload/v1645303681/test/I9_mcrcey.jpg">
+                    <div>
+                        <h2>@component.Model</h2>
+                        <p class="price">@component.Price $</p>
+                        <p class="descr">@component.GetDescription()</p>
+                        <a name="componentId" value="@component.Id" href="#">
+                            <p>Add to cart</p>
+                        </a>
+
+                        <button asp-page="BuildComputer" class="select" type="submit" name="info" value="@component.Id,@Model.Type">Add to PC</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </form>
+</section>

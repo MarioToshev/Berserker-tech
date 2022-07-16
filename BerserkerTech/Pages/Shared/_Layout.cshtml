@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="~/css/site.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="home">
+    <header>
+        <div class="logo">
+            <a asp-page="Index">
+                <img src="~/css/Photos/Logo.png" height="70px">
+            </a>
+        </div>
+        <nav>
+            <a asp-page="Index">HOME</a>
+            <a asp-page="BuildComputer">BUILD</a>
+            <a asp-page="Store">STORE</a>
+            <a asp-page="Cart">CART</a>
+            <a asp-page="Registration">ACCOUNT</a>
+            <div id="indicator"></div>
+        </nav>
+    </header>
+    @RenderBody();
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <footer>
+        <p>Designed by Mario Toshev</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+﻿@page
+@model BerserkerTech.Pages.RegistrationModel
+@{
+}
+<partial name="_ValidationScriptsPartial" />
+<section>
+    @if (HttpContext.Session.GetString("user_email") == null)
+    {
+        <div class="RegistrationForm">
+            <form method="post">
+                <h2>Regster</h2>
+
+                <div>
+                <span asp-validation-for="User.FirstName"></span>
+                <input type="text" asp-for="User.FirstName" placeholder="First Name" name="FirstName" required><br>
+                </div>
+
+                <span asp-validation-for="User.SecondName"></span>
+                <input type="text" asp-for="User.SecondName" placeholder="Last Name" name="SecondName" required><br>
+
+                <span asp-validation-for="User.Email" class="text-danger"></span>
+                <input type="text" asp-for="User.Email" placeholder="Email" name="Email" required><br>
+
+                <span asp-validation-for="User.Password" class="text-danger"></span>
+                <input type="Password" asp-for="User.Password" placeholder="Password" name="Password" required>
+
+                
+
+
+                <button class="form" type="submit">Register</button><br>
+                <p>Already have an account?</p>
+
+                <button class="form"><a asp-page="LogIn">Log in</a></button><br>
+                <a class="text-danger">@Model.Error</a>
+            </form>
+            
+        </div>
+    }
+    else
+    {
+        <h1>Hello @Model.User.FirstName </h1>
+        <br>
+        
+        <a asp-page="LogOut"><button class="form">Log Out</button></a>
+
+    }
+
+
+
+
+</section>
